@@ -1,0 +1,95 @@
+#root{
+}
+
+#buscar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1{
+  padding: 15px;
+}
+
+button{
+    --color: #070707;
+    font-family: inherit;
+    display: inline-block;
+    width: 4em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 2px;
+    font-size: 17px;
+    z-index: 1;
+    color: var(--color);
+    border: 1px solid var(--color);
+    border-radius: 6px;
+    position: relative;
+  }
+  
+  button::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 150px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+  }
+  
+  button:hover {
+    color: rgb(255, 255, 255);
+  }
+  
+  button:before {
+    top: 100%;
+    left: 100%;
+    transition: 0.3s all;
+  }
+  
+  button:hover::before {
+    top: -30px;
+    left: -30px;
+  }
+
+  .cep{
+    margin: 4px;
+    background-color: rgb(204, 204, 204);
+    width: 300px;
+    border-radius: 6px;
+    padding: 0px 0px 0px 10px;
+  }
+
+
+  .pesquisa {
+    margin: 3px;
+    width: 100%;
+    max-width: 220px;
+    height: 4px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1.5px solid lightgrey;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 20px -18px;
+  }
+  
+  .pesquisa:hover {
+    border: 2px solid lightgrey;
+    box-shadow: 0px 0px 20px -17px;
+  }
+  
+  .pesquisa:active {
+    transform: scale(0.95);
+  }
+  
+  .pesquisa:focus {
+    border: 2px solid grey;
+  }
+
+  .p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
